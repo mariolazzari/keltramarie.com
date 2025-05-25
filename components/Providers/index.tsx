@@ -5,15 +5,15 @@ import { NextIntlClientProvider } from "next-intl";
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <SidebarProvider>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </SidebarProvider>
-    </ThemeProvider>
+    <NextIntlClientProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <SidebarProvider>{children}</SidebarProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   );
 }

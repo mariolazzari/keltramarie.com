@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { SideBar } from "@/components/SideBar";
 import { Providers } from "@/components/Providers";
 import { Layout } from "@/types/Layout";
-import { geistMono, geistSans } from "./fonts";
-import { hasLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { geistMono, geistSans } from "../fonts";
 
 export const metadata: Metadata = {
   title: "Keltra Marie | Living Positively",
@@ -15,14 +12,12 @@ export const metadata: Metadata = {
 };
 
 async function RootLayout({ children, params }: Layout) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+
+  console.log("\n\n\n\nlocale", locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale || "en"} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

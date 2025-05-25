@@ -18,42 +18,43 @@ import {
   FaInstagram,
   FaTiktok,
 } from "react-icons/fa";
-import Link from "next/link";
 import { ThemeToggle } from "../ThemeToggle";
+import { LocaleToggle } from "../LocaleToggle";
+import Link from "next/link";
 
 export function SideBar() {
   const items = [
     {
       title: "Home",
-      url: "/",
+      url: "/it/",
       icon: FaHome,
     },
     {
       title: "About",
-      url: "/about",
+      url: "/it/about",
       icon: FaInfo,
     },
     {
       title: "Projects",
-      url: "/projects",
+      url: "/it/projects",
       icon: FaPeopleCarry,
     },
   ];
 
   const contacts = [
     {
-      title: "Write to me",
-      url: "/about",
+      title: "Scrivimi",
+      url: "keltramarketing@gmail.com",
       icon: FaAt,
     },
     {
       title: "Instagram",
-      url: "/",
+      url: "https://www.instagram.com/keltramarie/",
       icon: FaInstagram,
     },
     {
       title: "TikTok",
-      url: "/projects",
+      url: "https://www.tiktok.com/@keltra.marie",
       icon: FaTiktok,
     },
   ];
@@ -70,7 +71,7 @@ export function SideBar() {
               {items.map(item => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url}>
+                    <Link href={item.url} locale="en">
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
@@ -110,6 +111,11 @@ export function SideBar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <ThemeToggle />
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <LocaleToggle />
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
