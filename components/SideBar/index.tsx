@@ -17,6 +17,7 @@ import {
   FaAt,
   FaInstagram,
   FaTiktok,
+  FaFacebook,
 } from "react-icons/fa";
 import { ThemeToggle } from "../ThemeToggle";
 import { LocaleToggle } from "../LocaleToggle";
@@ -57,6 +58,16 @@ export function SideBar() {
       url: "https://www.tiktok.com/@keltra.marie",
       icon: FaTiktok,
     },
+    {
+      title: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61573417689155#",
+      icon: FaFacebook,
+    },
+  ];
+
+  const settings = [
+    { id: "theme", component: <ThemeToggle /> },
+    { id: "locale", component: <LocaleToggle /> },
   ];
 
   return (
@@ -108,16 +119,11 @@ export function SideBar() {
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <ThemeToggle />
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <LocaleToggle />
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+              {settings.map(({ component, id }) => (
+                <SidebarMenuItem key={id}>
+                  <SidebarMenuButton asChild>{component}</SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
