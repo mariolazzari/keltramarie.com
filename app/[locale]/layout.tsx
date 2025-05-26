@@ -5,6 +5,9 @@ import { SideBar } from "@/components/SideBar";
 import { Providers } from "@/components/Providers";
 import { Layout } from "@/types/Layout";
 import { geistMono, geistSans } from "../fonts";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Keltra Marie | Living Positively",
@@ -13,15 +16,16 @@ export const metadata: Metadata = {
 
 async function RootLayout({ children, params }: Layout) {
   const { locale } = await params;
-
-  console.log("\n\n\n\nlocale", locale);
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   return (
-    <html lang={locale || "en"} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
+        <Providers locale={locale}>
           <SideBar />
           <main className="w-full h-screen overflow-y-auto">
             <SidebarTrigger />

@@ -3,9 +3,9 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { ProvidersProps } from "./ProvidersProps";
 import { NextIntlClientProvider } from "next-intl";
 
-export function Providers({ children }: ProvidersProps) {
+export function Providers({ children, locale = "it" }: ProvidersProps) {
   return (
-    <NextIntlClientProvider>
+    <NextIntlClientProvider locale={locale}>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
