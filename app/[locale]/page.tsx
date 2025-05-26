@@ -17,8 +17,10 @@ async function Home() {
         priority
       />
 
-      <h1 className="text-5xl text-primary mb-4 font-bold">{t("title")}</h1>
-      <p className="text-lg max-w-lg font-semibold text-center mb-6">
+      <h1 className="text-5xl text-primary mb-4 font-bold text-center">
+        {t("title")}
+      </h1>
+      <p className="text-lg max-w-lg font-semibold text-justify mb-6">
         {t("intro")}
       </p>
 

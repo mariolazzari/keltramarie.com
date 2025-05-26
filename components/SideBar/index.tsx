@@ -44,7 +44,7 @@ export function SideBar() {
   const contacts = [
     {
       title: "Scrivimi",
-      url: "keltramarketing@gmail.com",
+      url: "mailto:keltramarketing@gmail.com",
       icon: FaAt,
     },
     {
