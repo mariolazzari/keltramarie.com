@@ -8,7 +8,7 @@ export function Providers({ children, locale = "it" }: ProvidersProps) {
     <NextIntlClientProvider locale={locale}>
       <ThemeProvider
         attribute="class"
-        defaultTheme="system"
+        defaultTheme="light"
         enableSystem
         disableTransitionOnChange
       >
