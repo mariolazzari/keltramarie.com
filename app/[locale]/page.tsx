@@ -9,8 +9,8 @@ async function Home() {
   return (
     <div className="flex flex-col items-center p-4">
       <Image
-        className="rounded-full mb-10"
-        src="/logo.png"
+        className="rounded-full mb-10 border-primary border-2"
+        src="/images/logo.png"
         width={200}
         height={200}
         alt="logo"
@@ -20,12 +20,12 @@ async function Home() {
       <h1 className="text-5xl text-primary mb-4 font-bold text-center">
         {t("title")}
       </h1>
-      <p className="text-lg max-w-lg font-semibold text-justify mb-6">
+      <p className="text-lg max-w-lg font-semibold text-justify">
         {t("intro")}
       </p>
 
       <Link href="mailto:keltramarketing@gmail.com" target="_blank">
-        <Button>Work with me</Button>
+        <Button className="my-4">{t("work")}</Button>
       </Link>
     </div>
   );

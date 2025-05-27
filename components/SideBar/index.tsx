@@ -45,7 +45,7 @@ export function SideBar() {
   const contacts = [
     {
       title: "Scrivimi",
-      url: "mailto:keltramarketing@gmail.com",
+      url: "mailto://keltramarketing@gmail.com",
       icon: FaAt,
     },
     {
@@ -60,7 +60,7 @@ export function SideBar() {
     },
     {
       title: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=61573417689155#",
+      url: "https://www.facebook.com/profile.php?id=61574022441564#",
       icon: FaFacebook,
     },
   ];
