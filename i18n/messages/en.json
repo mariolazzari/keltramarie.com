@@ -1,4 +1,22 @@
 {
+  "Sidebar": {
+    "mySite": "My Site",
+    "home": "Home",
+    "about": "About Me",
+    "projects": "My Projects",
+    "contacts": "My Contacts",
+    "mail": "Write Me",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tikTok": "TikTok",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "systemMode": "System Mode",
+    "locale": "Locale",
+    "it": "Italian",
+    "en": "English"
+  },
   "HomePage": {
     "title": "Hello I'm Kelly!",
     "intro": "I help to daily inspire a Sunshine State-of-Mind by encouraging self-motivation and a positive mindful lifestyle",

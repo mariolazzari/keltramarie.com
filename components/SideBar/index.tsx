@@ -22,44 +22,47 @@ import {
 import { ThemeToggle } from "../ThemeToggle";
 import { LocaleToggle } from "../LocaleToggle";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export function SideBar() {
+export async function SideBar() {
+  const t = await getTranslations("Sidebar");
+
   const items = [
     {
-      title: "Home",
-      url: "/it/",
+      title: t("home"),
+      url: "/",
       icon: FaHome,
     },
     {
-      title: "About",
-      url: "/it/about",
+      title: t("about"),
+      url: "/about",
       icon: FaInfo,
     },
     {
-      title: "Projects",
-      url: "/it/projects",
+      title: t("projects"),
+      url: "/projects",
       icon: FaPeopleCarry,
     },
   ];
 
   const contacts = [
     {
-      title: "Scrivimi",
+      title: t("mail"),
       url: "mailto://keltramarketing@gmail.com",
       icon: FaAt,
     },
     {
-      title: "Instagram",
+      title: t("instagram"),
       url: "https://www.instagram.com/keltramarie/",
       icon: FaInstagram,
     },
     {
-      title: "TikTok",
+      title: t("tikTok"),
       url: "https://www.tiktok.com/@keltra.marie",
       icon: FaTiktok,
     },
     {
-      title: "Facebook",
+      title: t("facebook"),
       url: "https://www.facebook.com/profile.php?id=61574022441564#",
       icon: FaFacebook,
     },

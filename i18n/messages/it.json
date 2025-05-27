@@ -1,4 +1,22 @@
 {
+  "Sidebar": {
+    "mySite": "Il mio sito",
+    "home": "Home",
+    "about": "Chi sono",
+    "projects": "I miei progetti",
+    "contacts": "I miei contatti",
+    "mail": "Scrivimi",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tikTok": "TikTok",
+    "theme": "Tema",
+    "darkMode": "Tema scuro",
+    "lightMode": "Tema chiaro",
+    "systemMode": "Tema di sistema",
+    "locale": "Lingua",
+    "it": "Italiano",
+    "en": "Inglese"
+  },
   "HomePage": {
     "title": "Hello I'm Kelly!",
     "intro": "Aiuto a ispirare quotidianamente uno stato d'animo positivo incoraggiando l'auto-motivazione e uno stile di vita consapevole.",
