@@ -23,6 +23,7 @@ import { ThemeToggle } from "../ThemeToggle";
 import { LocaleToggle } from "../LocaleToggle";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import Copyrights from "../Copyrights";
 
 export async function SideBar() {
   const t = await getTranslations("Sidebar");
@@ -131,7 +132,10 @@ export async function SideBar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter />
+
+      <SidebarFooter>
+        <Copyrights />
+      </SidebarFooter>
     </Sidebar>
   );
 }
