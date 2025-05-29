@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import {
   FaHome,
@@ -77,6 +78,7 @@ export async function SideBar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader />
+      <SidebarTrigger className="ml-2.5" />
 
       <SidebarContent>
         <SidebarGroup>

@@ -16,10 +16,28 @@ export function ThemeToggle() {
   const { open } = useSidebar();
   const t = useTranslations("Sidebar");
 
+  const items = [
+    {
+      title: t("theme"),
+      icon: Sun,
+      action: () => setTheme("light"),
+    },
+    {
+      title: t("darkMode"),
+      icon: Moon,
+      action: () => setTheme("dark"),
+    },
+    {
+      title: t("systemMode"),
+      icon: Settings,
+      action: () => setTheme("system"),
+    },
+  ];
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="flex items-center gap-0 cursor-pointer">
+        <div className="flex items-center gap-0 cursor-pointer hover:bg-secondary hover:text-white">
           <Button variant="ghost" size="icon">
             <div className="flex gap-2 text-left">
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -29,16 +47,13 @@ export function ThemeToggle() {
           {open && <span>{t("theme")}</span>}
         </div>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent align="start">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun /> {t("lightMode")}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon /> {t("darkMode")}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Settings /> {t("systemMode")}
-        </DropdownMenuItem>
+        {items.map(item => (
+          <DropdownMenuItem key={item.title} onClick={item.action}>
+            <item.icon className="mr-2" /> {item.title}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
