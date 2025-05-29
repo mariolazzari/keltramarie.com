@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { useSidebar } from "../ui/sidebar";
 import { FaCopyright } from "react-icons/fa";
 
+const year = new Date().getFullYear();
+
 function Copyrights() {
   const [text, setText] = useState("");
   const [showIcon, setShowIcon] = useState(false);
   const { open } = useSidebar();
-  const year = new Date().getFullYear();
 
   useEffect(() => {
     const text = open ? `Keltra Marie ${year} - All rights reserved` : "";
