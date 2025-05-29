@@ -9,7 +9,7 @@ async function Home() {
   return (
     <div className="flex flex-col items-center p-4">
       <Image
-        className="rounded-full mb-10 border-primary border-2"
+        className="rounded-full mt-4 mb-10 border-primary border-2"
         src="/images/logo.png"
         width={200}
         height={200}

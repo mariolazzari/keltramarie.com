@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { montserrat } from "@/app/fonts";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {
   title: "Keltra Marie | Living Positively",
@@ -24,6 +25,7 @@ async function RootLayout({ children, params }: Layout) {
       <body className={`${montserrat.variable} antialiased`}>
         <Providers locale={locale}>
           <SideBar />
+          <SidebarTrigger />
           <main className="w-full h-screen overflow-y-auto">{children}</main>
         </Providers>
       </body>

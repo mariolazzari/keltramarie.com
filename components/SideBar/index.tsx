@@ -78,11 +78,10 @@ export async function SideBar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader />
-      <SidebarTrigger className="ml-2.5" />
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>My site</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("mySite")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map(item => (
@@ -100,7 +99,7 @@ export async function SideBar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>My contacts</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("contacts")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {contacts.map(item => (
@@ -122,7 +121,7 @@ export async function SideBar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>Settings</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("settings")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {settings.map(({ component, id }) => (
