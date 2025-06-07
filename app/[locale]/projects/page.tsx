@@ -1,7 +1,44 @@
-function ProjectsPage() {
+import { SocialMedia } from "@/components/SocialMedia";
+import { getTranslations } from "next-intl/server";
+
+async function ProjectsPage() {
+  const t = await getTranslations("ProjectsPage");
+
+  const projets = [
+    {
+      href: "/reel/DKlsHCiI3qj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D",
+      title: "ADC Skincare",
+    },
+    {
+      href: "/real/DIVyLSFIFaA/",
+      title: "Bluest Frame",
+    },
+    {
+      href: "/p/DIb34pXo3t_/",
+      title: "Keltra Marie",
+    },
+    {
+      href: "/p/DJRGVSNIjZJ/",
+      title: "Surf Skate",
+    },
+    {
+      href: "/reel/DKUNExGoJM9/",
+      title: "Boom Boom",
+    },
+    {
+      href: "/reel/DKfRKbmosW5/",
+      title: "Idea 5 (Speed Up)",
+    },
+  ];
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h2 className="text-primary">Work in progress...</h2>
+    <div className="flex flex-col items-center justify-center gap-8">
+      <h2 className="text-2xl font-bold text-primary">{t("title")}</h2>
+      <div className="flex justify-center items-center gap-16 flex-wrap">
+        {projets.map(p => (
+          <SocialMedia key={p.href} {...p} />
+        ))}
+      </div>
     </div>
   );
 }
