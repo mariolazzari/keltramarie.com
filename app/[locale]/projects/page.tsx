@@ -1,4 +1,5 @@
 import { SocialMedia } from "@/components/SocialMedia";
+import { Title } from "@/components/Typography";
 import { getTranslations } from "next-intl/server";
 
 async function ProjectsPage() {
@@ -6,7 +7,7 @@ async function ProjectsPage() {
 
   const projets = [
     {
-      href: "/reel/DKlsHCiI3qj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D",
+      href: "/p/DKkLWgGJrm3",
       title: "ADC Skincare",
     },
     {
@@ -32,9 +33,9 @@ async function ProjectsPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8">
-      <h2 className="text-2xl font-bold text-primary">{t("title")}</h2>
-      <div className="flex justify-center items-center gap-16 flex-wrap">
+    <div className="flex flex-col items-center justify-center gap-8 py-4">
+      <Title>{t("title")}</Title>
+      <div className="flex justify-center gap-16 flex-wrap">
         {projets.map(p => (
           <SocialMedia key={p.href} {...p} />
         ))}

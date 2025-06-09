@@ -19,7 +19,7 @@ export function SocialMedia({ href, title }: SocialMediaProps) {
       <h2 className="text-xl font-semibold text-center">{title}</h2>
       <InstagramEmbed
         url={`https://www.instagram.com${href}`}
-        width={300}
+        width={330}
         captioned
         suppressHydrationWarning
       />
