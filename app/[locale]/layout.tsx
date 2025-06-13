@@ -25,7 +25,7 @@ async function RootLayout({ children, params }: Layout) {
       <body className={`${montserrat.variable} antialiased`}>
         <Providers locale={locale}>
           <SideBar />
-          <SidebarTrigger />
+          <SidebarTrigger className="xs:absolute left-0" />
           <main className="w-full h-screen overflow-y-auto">{children}</main>
         </Providers>
       </body>

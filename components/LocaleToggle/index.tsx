@@ -7,13 +7,23 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { redirect } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import { useSidebar } from "../ui/sidebar";
 import { useTranslations } from "next-intl";
 
 export function LocaleToggle() {
   const { open } = useSidebar();
   const t = useTranslations("Sidebar");
+  const path = usePathname();
+
+  const onClick = (locale: string) => {
+    const goto =
+      locale === "it" ? path.replace("en", "it") : path.replace("it", "en");
+
+    console.log(locale, goto);
+
+    redirect(goto);
+  };
 
   return (
     <DropdownMenu>
@@ -29,10 +39,10 @@ export function LocaleToggle() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="center">
-        <DropdownMenuItem onClick={() => redirect("/en")}>
+        <DropdownMenuItem onClick={() => onClick("en")}>
           {t("en")}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => redirect("/it")}>
+        <DropdownMenuItem onClick={() => onClick("it")}>
           {t("it")}
         </DropdownMenuItem>
       </DropdownMenuContent>

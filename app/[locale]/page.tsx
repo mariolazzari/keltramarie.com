@@ -1,6 +1,5 @@
+import { WorkWithMe } from "@/components/Buttons";
 import { Paragraph } from "@/components/Typography/Paragraph";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
@@ -21,11 +20,9 @@ async function Home() {
       <h1 className="text-5xl text-primary mb-4 font-bold text-center">
         {t("title")}
       </h1>
-      <Paragraph className="font-semibold">{t("intro")}</Paragraph>
+      <Paragraph className="font-semibold text-center">{t("intro")}</Paragraph>
 
-      <Link href="mailto:keltramarketing@gmail.com" target="_blank">
-        <Button className="my-4">{t("work")}</Button>
-      </Link>
+      <WorkWithMe />
     </div>
   );
 }

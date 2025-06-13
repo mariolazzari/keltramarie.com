@@ -21,9 +21,19 @@
   "HomePage": {
     "title": "Hello I'm Kelly!",
     "intro": "I help to daily inspire a Sunshine State-of-Mind by encouraging self-motivation and a positive mindful lifestyle",
-    "work": "Work with me"
+    "work": "Work with me and spread those good vibes"
   },
   "ProjectsPage": {
     "title": "My projects"
+  },
+  "AboutPage": {
+    "title": "Hey I’m Kelly!",
+    "p1": "I’m an Italian-American Content Creator here to help inspire and encourage a positive, mindful and wellness-focused lifestyle.",
+    "p2": "Whether it’s producing engaging UGC for brands or sharing authentic stories that resonate, my goal is to spread good vibes and genuine connection & relationships through my content on Social Media platforms, all by keeping it real, fun & inspiring.✨",
+    "p3": "I am currently studying affiliate marketing with AI to expand my impact and reach new heights.",
+    "p4": "My niche includes: Positivity, Personal Growth, Wellness, Mindset, Aesthetic Visuals, … and a dash of Humor.",
+    "p5": "My passions are Skateboarding, Surfing, Wake, and all Board Sports and Adventurous Activities.",
+    "p6": "I like to trying new things.",
+    "p7": "I enjoy exploring new destinations including Hotel experiences and trying out the coolest Beauty products & Clothing finds, especially eco-friendly."
   }
 }

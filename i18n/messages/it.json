@@ -21,9 +21,19 @@
   "HomePage": {
     "title": "Hello I'm Kelly!",
     "intro": "Aiuto a ispirare quotidianamente uno stato d'animo positivo incoraggiando l'auto-motivazione e uno stile di vita consapevole.",
-    "work": "Lavora con me"
+    "work": "Lavora con me e diffondiamo good vibes "
   },
   "ProjectsPage": {
     "title": "I miei progetti"
+  },
+  "AboutPage": {
+    "title": "Hey, sono Kelly!",
+    "p1": "Sono una Content Creator italo-americana qui per ispirare e incoraggiare uno stile di vita positivo, consapevole e orientato al benessere.",
+    "p2": "Che si tratti di creare coinvolgenti UGC per i brand o di condividere storie autentiche che risuonano, il mio obiettivo è diffondere buone vibrazioni e autentiche connessioni e relazioni attraverso il mio contenuto sui social media, sempre mantenendo tutto reale, divertente e ispirante. ✨",
+    "p3": "Attualmente sto studiando marketing affiliato con IA per ampliare il mio impatto e raggiungere nuovi traguardi.",
+    "p4": "Il mio focus include: positività, crescita personale, benessere, mindset, visual estetici, ... e un tocco di umorismo.",
+    "p5": "Le mie passioni sono lo skateboarding, il surf, il wakeboard e tutti gli sport su tavola e attività avventurose.",
+    "p6": "Mi piace provare cose nuove.",
+    "p7": "Adoro esplorare nuove destinazioni, inclusi esperienze in hotel, e scoprire i prodotti di bellezza e l’abbigliamento più cool — soprattutto quelli eco-sostenibili."
   }
 }

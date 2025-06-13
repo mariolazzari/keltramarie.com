@@ -18,7 +18,7 @@ export function ThemeToggle() {
 
   const items = [
     {
-      title: t("theme"),
+      title: t("lightMode"),
       icon: Sun,
       action: () => setTheme("light"),
     },

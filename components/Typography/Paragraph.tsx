@@ -7,7 +7,7 @@ export function Paragraph({
   ...props
 }: ComponentProps<"p">) {
   return (
-    <p className={cn("text-lg text-justify max-w-lg", className)} {...props}>
+    <p className={cn("text-sm text-justify max-w-lg", className)} {...props}>
       {children}
     </p>
   );
