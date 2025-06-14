@@ -1,13 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { InstagramEmbed, InstagramEmbedProps } from "react-social-media-embed";
-import { Title } from "../Typography";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";

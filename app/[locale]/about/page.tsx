@@ -1,10 +1,8 @@
 import { WorkWithMe } from "@/components/Buttons";
 import { Logo } from "@/components/Logo";
-import { Title } from "@/components/Typography";
 import { Paragraph } from "@/components/Typography/Paragraph";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
