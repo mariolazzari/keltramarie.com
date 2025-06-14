@@ -1,9 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
-import { SocialMediaProps } from "./SocialMediaProps";
-import { InstagramEmbed } from "react-social-media-embed";
+import { InstagramEmbed, InstagramEmbedProps } from "react-social-media-embed";
+import { Title } from "../Typography";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
-export function SocialMedia({ href, title }: SocialMediaProps) {
+type Props = {
+  title: string;
+  text?: string;
+} & InstagramEmbedProps;
+
+export function SocialMedia({ title, text, ...props }: Props) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -15,14 +29,16 @@ export function SocialMedia({ href, title }: SocialMediaProps) {
   }
 
   return (
-    <div className="flex flex-col gap-4">
-      <h2 className="text-xl font-semibold text-center">{title}</h2>
-      <InstagramEmbed
-        url={`https://www.instagram.com${href}`}
-        width={330}
-        captioned
-        suppressHydrationWarning
-      />
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-primary text-center text-2xl font-semibold">
+          {title}
+        </CardTitle>
+        <CardDescription>{text}</CardDescription>
+      </CardHeader>
+      <CardContent className="w-[350px] md:w-[400px]">
+        <InstagramEmbed {...props} />
+      </CardContent>
+    </Card>
   );
 }

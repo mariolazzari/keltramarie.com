@@ -1,12 +1,13 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "../ui/button";
 import { getTranslations } from "next-intl/server";
 import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-type Props = ComponentProps<"button">;
-
-export async function WorkWithMe({ className, ...props }: Props) {
+export async function WorkWithMe({
+  className,
+  ...props
+}: ComponentProps<"button">) {
   const t = await getTranslations("HomePage");
 
   return (

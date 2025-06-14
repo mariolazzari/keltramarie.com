@@ -1,21 +1,14 @@
 import { WorkWithMe } from "@/components/Buttons";
+import { Logo } from "@/components/Logo";
 import { Paragraph } from "@/components/Typography/Paragraph";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 async function Home() {
   const t = await getTranslations("HomePage");
 
   return (
     <div className="flex flex-col items-center p-4">
-      <Image
-        className="rounded-full mt-4 mb-10 border-primary border-2"
-        src="/images/logo.png"
-        width={200}
-        height={200}
-        alt="logo"
-        priority
-      />
+      <Logo />
 
       <h1 className="text-5xl text-primary mb-4 font-bold text-center">
         {t("title")}

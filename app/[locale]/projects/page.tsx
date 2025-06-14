@@ -5,13 +5,13 @@ import { getTranslations } from "next-intl/server";
 async function ProjectsPage() {
   const t = await getTranslations("ProjectsPage");
 
-  const projets = [
+  const projects = [
     {
-      href: "/p/DKkLWgGJrm3",
+      href: "/reel/DKlsHCiI3qj",
       title: "ADC Skincare",
     },
     {
-      href: "/real/DIVyLSFIFaA/",
+      href: "/reel/DIVyLSFIFaA",
       title: "Bluest Frame",
     },
     {
@@ -35,9 +35,13 @@ async function ProjectsPage() {
   return (
     <div className="flex flex-col items-center justify-center gap-8 py-4">
       <Title>{t("title")}</Title>
-      <div className="flex justify-center gap-16 flex-wrap">
-        {projets.map(p => (
-          <SocialMedia key={p.href} {...p} />
+      <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
+        {projects.map(({ href, title }) => (
+          <SocialMedia
+            key={href}
+            title={title}
+            url={`https://www.instagram.com${href}`}
+          />
         ))}
       </div>
     </div>
