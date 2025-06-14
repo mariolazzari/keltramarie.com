@@ -33,14 +33,16 @@ async function ProjectsPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8 py-4">
-      <Title>{t("title")}</Title>
-      <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
+    <div className="flex flex-col items-center justify-center gap-10 py-4">
+      <Title className="mb-[-100px] md:mb-4">{t("title")}</Title>
+      <div className="flex justify-center items-center flex-wrap gap-10">
         {projects.map(({ href, title }) => (
           <SocialMedia
             key={href}
+            className="scale-75 md:scale-100 mb-[-200px] md:mb-0"
             title={title}
             url={`https://www.instagram.com${href}`}
+            width={400}
           />
         ))}
       </div>

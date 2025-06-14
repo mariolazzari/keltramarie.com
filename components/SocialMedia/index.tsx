@@ -14,7 +14,7 @@ type Props = {
   text?: string;
 } & InstagramEmbedProps;
 
-export function SocialMedia({ title, text, ...props }: Props) {
+export function SocialMedia({ title, text, className, ...props }: Props) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -26,14 +26,14 @@ export function SocialMedia({ title, text, ...props }: Props) {
   }
 
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <CardTitle className="text-primary text-center text-2xl font-semibold">
           {title}
         </CardTitle>
         <CardDescription>{text}</CardDescription>
       </CardHeader>
-      <CardContent className="w-[350px] md:w-[400px]">
+      <CardContent>
         <InstagramEmbed {...props} />
       </CardContent>
     </Card>
