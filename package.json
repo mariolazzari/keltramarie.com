@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start -p 3006",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next && rm -rf node_modules"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
