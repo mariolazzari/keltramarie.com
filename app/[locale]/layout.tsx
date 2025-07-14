@@ -26,7 +26,9 @@ async function RootLayout({ children, params }: Layout) {
         <Providers locale={locale}>
           <SideBar />
           <main className="w-full h-screen overflow-y-auto">
-            <SidebarTrigger />
+            <div className="fixed top-4 z-50">
+              <SidebarTrigger />
+            </div>
             {children}
           </main>
         </Providers>
