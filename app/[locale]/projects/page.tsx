@@ -33,8 +33,9 @@ async function ProjectsPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-10 py-4">
-      <Title className="mb-[-100px] md:mb-4">{t("title")}</Title>
+    <div className="flex flex-col items-center justify-center">
+      <Title className="md:my-8">{t("title")}</Title>
+
       <div className="flex justify-center items-center flex-wrap gap-10">
         {projects.map(({ href, title }) => (
           <SocialMedia

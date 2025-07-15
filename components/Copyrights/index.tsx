@@ -1,31 +1,13 @@
-"use client";
-import { useEffect, useState } from "react";
-import { useSidebar } from "../ui/sidebar";
 import { FaCopyright } from "react-icons/fa";
-
-const year = new Date().getFullYear();
+import { Paragraph } from "../Typography/Paragraph";
 
 function Copyrights() {
-  const [text, setText] = useState("");
-  const [showIcon, setShowIcon] = useState(false);
-  const { open } = useSidebar();
-
-  useEffect(() => {
-    const text = open ? `Keltra Marie ${year} - All rights reserved` : "";
-    setTimeout(() => {
-      setText(text);
-      setShowIcon(open);
-    }, 300);
-  }, [open, setText]);
-
-  if (!open) {
-    return null;
-  }
+  const year = new Date().getFullYear();
 
   return (
-    <div className="flex items-center gap-1 justify-center text-xs">
-      {showIcon && <FaCopyright />}
-      <p>{text}</p>
+    <div className="flex items-center gap-1 justify-center text-xs w-full border-purple-500">
+      <FaCopyright />
+      <Paragraph>{`Keltra Marie ${year} - All rights reserved`}</Paragraph>
     </div>
   );
 }
