@@ -34,7 +34,7 @@ async function ProjectsPage() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <Title className="md:my-8">{t("title")}</Title>
+      <Title className="-mb-8 md:mb-8">{t("title")}</Title>
 
       <div className="flex justify-center items-center flex-wrap gap-10">
         {projects.map(({ href, title }) => (

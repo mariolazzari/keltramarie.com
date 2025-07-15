@@ -32,7 +32,7 @@ async function RootLayout({ children, params }: Layout) {
           <div className="flex h-dvh flex-col justify-between items-center w-full">
             <Header />
 
-            <main className="h-[calc(100dvh-96px)] overflow-y-auto w-full">
+            <main className="h-[calc(100dvh-96px)] overflow-y-auto w-full p-4">
               {children}
             </main>
 
