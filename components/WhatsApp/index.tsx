@@ -31,8 +31,6 @@ export function WhatsApp({
       }
       darkMode={theme === "dark"}
       {...props}
-      allowClickAway
-      allowEsc
       notification
       notificationSound
     />
