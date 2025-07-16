@@ -1,4 +1,4 @@
-import Copyrights from "../Copyrights";
+import { Copyrights } from "../Copyrights";
 import { WhatsApp } from "../WhatsApp";
 import { FooterProps } from "./FooterProps";
 

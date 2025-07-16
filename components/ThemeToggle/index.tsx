@@ -1,6 +1,6 @@
 "use client";
 import { Moon, Sun, Settings } from "lucide-react";
-import { useTheme } from "next-themes";
+import { ThemeProviderProps, useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSidebar } from "../ui/sidebar";
 import { useTranslations } from "next-intl";
+import { ThemeToggleProps } from "./ThemeToggleProps";
 
-export function ThemeToggle() {
+export function ThemeToggle({ showLabel = true }: ThemeToggleProps) {
   const { setTheme } = useTheme();
   const { open } = useSidebar();
   const t = useTranslations("Sidebar");
@@ -48,7 +49,7 @@ export function ThemeToggle() {
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </div>
           </Button>
-          {open && <span>{t("theme")}</span>}
+          {open && showLabel && <span>{t("theme")}</span>}
         </div>
       </DropdownMenuTrigger>
 

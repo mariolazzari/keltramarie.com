@@ -10,8 +10,9 @@ import {
 import { redirect, usePathname } from "next/navigation";
 import { useSidebar } from "../ui/sidebar";
 import { useTranslations } from "next-intl";
+import { LocaleToggleProps } from "./LocaleToggleProps";
 
-export function LocaleToggle() {
+export function LocaleToggle({ showLabel = true }: LocaleToggleProps) {
   const { open } = useSidebar();
   const t = useTranslations("Sidebar");
   const path = usePathname();
@@ -19,9 +20,6 @@ export function LocaleToggle() {
   const onClick = (locale: string) => {
     const goto =
       locale === "it" ? path.replace("en", "it") : path.replace("it", "en");
-
-    console.log(locale, goto);
-
     redirect(goto);
   };
 
@@ -35,7 +33,7 @@ export function LocaleToggle() {
               <FaGlobe className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </div>
           </Button>
-          {open && <span>{t("locale")}</span>}
+          {open && showLabel && <span>{t("locale")}</span>}
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="center">

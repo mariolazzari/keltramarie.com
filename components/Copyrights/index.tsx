@@ -1,7 +1,7 @@
 import { FaCopyright } from "react-icons/fa";
 import { Paragraph } from "../Typography/Paragraph";
 
-function Copyrights() {
+export function Copyrights() {
   const year = new Date().getFullYear();
 
   return (
@@ -16,5 +16,3 @@ function Copyrights() {
     </ul>
   );
 }
-
-export default Copyrights;

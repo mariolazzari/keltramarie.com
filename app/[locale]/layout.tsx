@@ -6,11 +6,16 @@ import { Layout } from "@/types/Layout";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
-import { montserrat } from "@/app/fonts";
-import { SidebarTrigger } from "@/components/ui/sidebar";
-import { WhatsApp } from "@/components/WhatsApp";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Montserrat } from "next/font/google";
+
+// main font
+const montserrat = Montserrat({
+  subsets: ["latin"], // Essential for reducing font file size
+  display: "swap", // Ensures text remains visible during font load
+  variable: "--font-montserrat", // Optional: Define a CSS variable for Tailwind CSS
+});
 
 export const metadata: Metadata = {
   title: "Keltra Marie | Living Positively",
