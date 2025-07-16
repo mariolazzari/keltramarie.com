@@ -84,7 +84,7 @@ export async function SideBar() {
               {items.map(item => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url} locale="en">
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
