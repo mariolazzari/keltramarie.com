@@ -3,19 +3,14 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { WhatsAppProps } from "./WhatsAppProps";
 import { useTheme } from "next-themes";
 
-export function WhatsApp({
-  locale,
-  phoneNumber = "+393207865395",
-  accountName = "Keltra Marie",
-  ...props
-}: WhatsAppProps) {
+export function WhatsApp({ locale, ...props }: WhatsAppProps) {
   const { theme } = useTheme();
 
   return (
     <FloatingWhatsApp
       avatar="/images/logo.png"
-      phoneNumber={phoneNumber}
-      accountName={accountName}
+      phoneNumber={process.env.NEXT_PUBLIC_PHONE || ""}
+      accountName="Keltra Marie"
       chatMessage={
         locale === "it"
           ? "Ciao! Come posso aiutarti?"
@@ -30,9 +25,9 @@ export function WhatsApp({
         locale === "it" ? "Scrivi un messaggio..." : "Type a message..."
       }
       darkMode={theme === "dark"}
-      {...props}
       notification
       notificationSound
+      {...props}
     />
   );
 }

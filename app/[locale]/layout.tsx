@@ -33,14 +33,11 @@ async function RootLayout({ children, params }: Layout) {
       <body className={`${montserrat.variable} antialiased`}>
         <Providers locale={locale}>
           <SideBar />
-
           <div className="flex h-dvh flex-col justify-between items-center w-full">
             <Header />
-
             <main className="h-[calc(100dvh-96px)] overflow-y-auto w-full p-4">
               {children}
             </main>
-
             <Footer locale={locale} />
           </div>
         </Providers>
