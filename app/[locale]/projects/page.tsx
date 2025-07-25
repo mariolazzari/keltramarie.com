@@ -20,10 +20,10 @@ async function ProjectsPage() {
       <Title className="-mb-8 md:mb-8">{t("title")}</Title>
 
       <div className="flex justify-center items-center flex-wrap gap-10">
-        {projects.map(p => (
+        {projects.reverse().map(p => (
           <SocialMedia
-            key={p}
             className="scale-75 md:scale-100 mb-[-200px] md:mb-0"
+            key={p}
             url={`https://www.instagram.com${p}`}
             width={400}
           />

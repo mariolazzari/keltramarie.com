@@ -47,7 +47,7 @@ export async function SideBar() {
   const contacts = [
     {
       title: t("mail"),
-      url: "mailto://keltramarketing@gmail.com",
+      url: "mailto:keltramarketing@gmail.com",
       icon: FaAt,
     },
     {
